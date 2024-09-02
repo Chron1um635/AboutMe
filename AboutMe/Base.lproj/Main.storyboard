@@ -114,7 +114,6 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVd-DJ-9td">
                                         <rect key="frame" x="34.33333333333335" y="106.66666666666663" width="81.666666666666686" height="34.333333333333343"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log out"/>
@@ -133,7 +132,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logOutButton" destination="VVd-DJ-9td" id="J6G-Xb-VxY"/>
                         <outlet property="welcomeLabel" destination="vI7-0m-TLD" id="HIx-rT-74X"/>
                     </connections>
                 </viewController>
