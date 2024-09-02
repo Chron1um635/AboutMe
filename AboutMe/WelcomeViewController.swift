@@ -10,7 +10,6 @@ import UIKit
 final class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
-    @IBOutlet var logOutButton: UIButton!
     
     var username: String!
     
@@ -19,9 +18,6 @@ final class WelcomeViewController: UIViewController {
         
         welcomeLabel.text = "Welcome, \(username ?? "")!"
         welcomeLabel.textColor = .white
-        
-        logOutButton.layer.cornerRadius = 5
-        logOutButton.backgroundColor = .clear
         
         view.applyGradient()
     }
