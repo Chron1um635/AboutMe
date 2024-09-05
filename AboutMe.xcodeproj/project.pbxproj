@@ -14,6 +14,10 @@
 		22DB7CBF2C84A23400091FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DB7CBE2C84A23400091FF0 /* Assets.xcassets */; };
 		22DB7CC22C84A23400091FF0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 22DB7CC12C84A23400091FF0 /* Base */; };
 		22DB7CCA2C84A2B200091FF0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB7CC92C84A2B200091FF0 /* WelcomeViewController.swift */; };
+		22DB7CF72C88C5E700091FF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB7CF62C88C5E700091FF0 /* Profile.swift */; };
+		22DB7CFA2C88D1FB00091FF0 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB7CF92C88D1FB00091FF0 /* PersonViewController.swift */; };
+		22DB7CFC2C88E5DD00091FF0 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB7CFB2C88E5DD00091FF0 /* DescriptionViewController.swift */; };
+		22DB7CFE2C88EBC900091FF0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB7CFD2C88EBC900091FF0 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		22DB7CC12C84A23400091FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22DB7CC32C84A23400091FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22DB7CC92C84A2B200091FF0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		22DB7CF62C88C5E700091FF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		22DB7CF92C88D1FB00091FF0 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		22DB7CFB2C88E5DD00091FF0 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		22DB7CFD2C88EBC900091FF0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,52 @@
 		22DB7CB42C84A23300091FF0 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				22DB7CB52C84A23300091FF0 /* AppDelegate.swift */,
-				22DB7CB72C84A23300091FF0 /* SceneDelegate.swift */,
-				22DB7CB92C84A23300091FF0 /* LoginViewController.swift */,
-				22DB7CC92C84A2B200091FF0 /* WelcomeViewController.swift */,
-				22DB7CBB2C84A23300091FF0 /* Main.storyboard */,
+				22DB7CF42C88C51600091FF0 /* ViewControllers */,
+				22DB7CF82C88C5EC00091FF0 /* Models */,
+				22DB7CF52C88C53C00091FF0 /* UI */,
+				22DB7CF32C88C4BE00091FF0 /* App */,
 				22DB7CBE2C84A23400091FF0 /* Assets.xcassets */,
-				22DB7CC02C84A23400091FF0 /* LaunchScreen.storyboard */,
-				22DB7CC32C84A23400091FF0 /* Info.plist */,
 			);
 			path = AboutMe;
+			sourceTree = "<group>";
+		};
+		22DB7CF32C88C4BE00091FF0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22DB7CB52C84A23300091FF0 /* AppDelegate.swift */,
+				22DB7CB72C84A23300091FF0 /* SceneDelegate.swift */,
+				22DB7CC32C84A23400091FF0 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22DB7CF42C88C51600091FF0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22DB7CB92C84A23300091FF0 /* LoginViewController.swift */,
+				22DB7CC92C84A2B200091FF0 /* WelcomeViewController.swift */,
+				22DB7CF92C88D1FB00091FF0 /* PersonViewController.swift */,
+				22DB7CFB2C88E5DD00091FF0 /* DescriptionViewController.swift */,
+				22DB7CFD2C88EBC900091FF0 /* TabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		22DB7CF52C88C53C00091FF0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				22DB7CBB2C84A23300091FF0 /* Main.storyboard */,
+				22DB7CC02C84A23400091FF0 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		22DB7CF82C88C5EC00091FF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22DB7CF62C88C5E700091FF0 /* Profile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22DB7CFE2C88EBC900091FF0 /* TabBarViewController.swift in Sources */,
 				22DB7CBA2C84A23300091FF0 /* LoginViewController.swift in Sources */,
+				22DB7CFC2C88E5DD00091FF0 /* DescriptionViewController.swift in Sources */,
+				22DB7CFA2C88D1FB00091FF0 /* PersonViewController.swift in Sources */,
+				22DB7CF72C88C5E700091FF0 /* Profile.swift in Sources */,
 				22DB7CCA2C84A2B200091FF0 /* WelcomeViewController.swift in Sources */,
 				22DB7CB62C84A23300091FF0 /* AppDelegate.swift in Sources */,
 				22DB7CB82C84A23300091FF0 /* SceneDelegate.swift in Sources */,
@@ -298,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H9XV7H58JV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +378,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H9XV7H58JV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

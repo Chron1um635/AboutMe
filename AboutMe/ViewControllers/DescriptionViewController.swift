@@ -8,22 +8,32 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
-
+    
+    @IBOutlet var descriptionLabel: UILabel!
+    
+    var personDescription: String!
+    private let firstColor = UIColor(
+        red: 0.69,
+        green: 0.31,
+        blue: 0.78,
+        alpha: 1
+    )
+    private let secondColor = UIColor(
+        red: 0.3,
+        green: 0.45,
+        blue: 0.98,
+        alpha: 1
+    )
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        descriptionLabel.text = personDescription
+        
+        descriptionLabel.textColor = .white
+        
+        view.applyGradient(firstColor: firstColor, secondColor: secondColor)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
