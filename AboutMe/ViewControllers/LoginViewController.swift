@@ -14,8 +14,8 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
-    let correctLogin = "user"
-    let correctPassword = "111"
+    private let correctLogin = "user"
+    private let correctPassword = "111"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +50,11 @@ final class LoginViewController: UIViewController {
         return true
     }
     
-    @IBAction func askLoginButtonAction(_ sender: Any) {
+    @IBAction func askLoginButtonAction() {
         showAlert(with: "Oops", andMessage: "Correct login is: \(correctLogin)")
     }
     
-    @IBAction func askPasswordButtonAction(_ sender: Any) {
+    @IBAction func askPasswordButtonAction() {
         showAlert(with: "Oops", andMessage: "Correct password is: \(correctPassword)")
     }
     
@@ -71,12 +71,9 @@ final class LoginViewController: UIViewController {
         )
         let okAction = UIAlertAction(
             title: "OK",
-            style: .default,
-            handler: {
-            _ in
-            self.loginTextField.text = ""
-            self.passwordTextField.text = ""
-        })
+            style: .default) {_ in
+                self.passwordTextField.text = ""
+            }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
