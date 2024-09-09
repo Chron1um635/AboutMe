@@ -8,9 +8,9 @@
 struct User {
     let login: String
     let password: String
-    
+    let person: Person
     static func getUser() -> User {
-        User.init(login: "user", password: "111")
+        User(login: "user", password: "111", person: Person.getPerson())
     }
 }
 
@@ -24,7 +24,7 @@ struct Person {
     let description: String
     
     static func getPerson() -> Person {
-        Person.init(
+        Person(
             fullName: "Назаров Максим",
             age: "26",
             city: "Москва",
