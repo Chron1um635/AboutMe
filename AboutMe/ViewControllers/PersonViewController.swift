@@ -17,19 +17,7 @@ final class PersonViewController: UIViewController {
     @IBOutlet var hobbyLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
     
-    private let person = Person.getPerson()
-    private let firstColor = UIColor(
-        red: 0.69,
-        green: 0.31,
-        blue: 0.78,
-        alpha: 1
-    )
-    private let secondColor = UIColor(
-        red: 0.3,
-        green: 0.45,
-        blue: 0.98,
-        alpha: 1
-    )
+    var person: Person!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let descriptionVC = segue.destination as? DescriptionViewController
@@ -51,7 +39,7 @@ final class PersonViewController: UIViewController {
         job.textColor = .white
         post.textColor = .white
         
-        view.applyGradient(firstColor: firstColor, secondColor: secondColor)
+        view.applyGradient()
         
         avatarImageView.makeRounded()
     }

@@ -33,6 +33,10 @@ final class LoginViewController: UIViewController {
         welcomeTBVC?.viewControllers?.forEach{ viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.username = user.login
+            } else if let navigationVC = viewController as? UINavigationController {
+                if let personVC = navigationVC.viewControllers.first as? PersonViewController {
+                    personVC.person = user.person
+                }
             }
         }
         
